@@ -45,7 +45,7 @@ const UserSchema = new Schema({
 	amount:{
 		type: Number,
 		required: [true, 'You have to put some money on your account to open it'],
-		unique: true
+		// unique: true
 	}
 })
 

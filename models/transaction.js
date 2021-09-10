@@ -8,11 +8,12 @@ const TransactionSchema = new Schema({
 	},
 	amount: {
 		type: Number,
-		// default: 100
+		default: 100,
 		required: [true, 'You need to send money if you want to make a transaction']
 	},
 	userId: {
 		type: String,
+		// ref: 'User',
 		required: [true, 'Please put the account id of the person you want to send money']
 	}
 });

@@ -19,10 +19,10 @@ router.get('/:id',[
 ], GetTransactionById);
 
 //Create a transaction
-router.post('/:id',[
+router.post('/',[
 	validateJWT,
-	check('id').isMongoId(),
-	check('id').custom(isValidId),
+	// check('id').isMongoId(),
+	// check('id').custom(isValidId),
 	validateFields
 ],CreateTransaction);
 
