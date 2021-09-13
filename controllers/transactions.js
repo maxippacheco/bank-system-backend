@@ -76,9 +76,12 @@ const CreateTransaction = async(req, res = response) => {
 	// const { id } = req.params;
 	let { amount, userTo, userFrom } = req.body;
 
+	// console.log(amount, userTo, userFrom);
+
 	//Person who do the transaction
 	let userTransactionTo = await User.findById(userTo);
 	let userGivesMoney = await User.findById(userFrom);
+
 	
 	if (userTransactionTo.amount < 0) {
 		return res.status(401).json({

@@ -21,6 +21,9 @@ router.get('/:id',[
 //Create a transaction
 router.post('/',[
 	validateJWT,
+	check('amount').notEmpty(),
+	check('userTo').notEmpty(),
+	check('userFrom').notEmpty(),
 	// check('id').isMongoId(),
 	// check('id').custom(isValidId),
 	validateFields
